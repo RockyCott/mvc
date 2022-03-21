@@ -1,0 +1,60 @@
+#cover, #cover_btn{
+  height: 60vh;
+  width: 100%;
+}
+
+#cover_img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.modal-title{
+  font-weight: bold;
+}
+
+#community-name{
+  font-weight: 700;
+  font-family: 'Bebas Neue';
+  font-size: 35px !important;
+  margin-bottom: 0;
+}
+#community-creator{
+  font-weight: 500;
+}
+
+#post-title{
+  font-size: 20px !important;
+}
+/* Links inside the navbar */
+.navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.btn-discord{
+  color: white;
+  background-color: #7289da;
+  border-color: #7289da;
+}
+
+.post-form{
+  max-width: 70%;
+}
+
+#community_posts{
+  font-family: 'Staatliches';
+  text-shadow: 1px 1px #ffc107,
+  
+}
+
+
+/* Change background on mouse-over */
+.navbar a:hover {
+  background: #ddd;
+  color: black;
+}

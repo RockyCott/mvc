@@ -1,0 +1,44 @@
+{% extends 'bootstrap/base.html' %}
+
+{% block title %} {{ super() }} About {%endblock%}
+
+{% block styles %}
+{{super()}}
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+<link rel="stylesheet" href="{{url_for('static', filename='css/index.css')}}">
+<link rel="stylesheet" href="{{url_for('static', filename='css/styles.css')}}">
+<link rel="stylesheet" href="{{url_for('static', filename='css/community.css')}}">
+{% endblock %}
+
+{% block scripts %}
+    {{super()}}
+    <script src="{{url_for('static', filename='js/go_back.js')}}"></script>
+    <script src="{{url_for('static', filename='js/back_to_top.js')}}"></script>
+{% endblock %}
+
+{%block content%}
+
+
+
+<div class="container align-items-center">
+    <div class="row">
+        <div class="col-10">
+            <button id="go-back" class="btn btn-secondary shadow-none px-0" style="border-color: transparent; background-color: transparent; transition: none !important;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="55" height="22" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+                </svg>
+            </button>
+        </div>
+    <div>
+    <h1 id="main_title">
+        ABOUT
+    </h1>
+    <div>
+        <p class="oswald">
+            Aqui va una descripción del sitio
+
+        </p>
+    </div>
+</div>
+
+{%endblock%}

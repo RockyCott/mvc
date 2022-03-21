@@ -1,0 +1,13 @@
+Flask==1.1.4
+flask-bootstrap
+flask-wtf
+flask-sqlalchemy
+flask-migrate
+psycopg2
+flask-login
+flask-talisman
+pyopenssl
+Flask-Mail
+nudenet
+gunicorn
+email-validator

@@ -1,0 +1,47 @@
+body{
+    height: 100vh;
+    background: #0d1b2a;
+    background-color: #212529;
+    color: white;
+    font-size: 13px;
+    /*background: linear-gradient(to bottom right, #faa307, #6a040f);*/
+}
+
+.control-label{
+    display: none;
+}
+
+.form-box{
+    background-color: #13191f;
+}
+
+a, a:visited, a:hover, a:visited:active{
+    text-decoration: none;
+    color: #0664FF !important;
+} 
+
+.main_title{
+    font-size: 20px;
+}
+
+.buttons{
+    font-size: 14px;
+}
+
+.inputs{
+    font-size: 13px;
+}
+
+
+.fade-in-out:not(.show){
+    opacity: 0;
+}
+
+
+.fade-in-out{
+    transition: opacity .15s linear;
+    transition-property: opacity;
+    transition-duration: 0.15s;
+    transition-timing-function: linear;
+    transition-delay: 0s;
+}

@@ -1,0 +1,191 @@
+body {
+  padding-top: 40px;
+  background: #0d1b2a;
+  background-color: #212529;
+  color: white;
+  font-size: 14px !important;
+}
+
+@font-face {
+  font-family: "Press Start 2P";
+  src: url("/static/fonts/PressStart2P-Regular.ttf");
+  
+}
+
+@font-face {
+  font-family: 'Bebas Neue';
+  src: url("/static/fonts/BebasNeue-Regular.ttf");
+}
+@font-face {
+  font-family: 'Staatliches';
+  src: url("/static/fonts/Staatliches-Regular.ttf");
+}
+@font-face {
+  font-family: 'Oswald';
+  src: url('/static/fonts/Oswald-VariableFont_wght.ttf');
+}
+
+.oswald{
+  font-family: 'Oswald';
+  font-size: 17px;
+}
+
+#main-text{
+  font-family: 'Bebas Neue';
+  font-size: 30px;
+}
+
+#main_title{
+  font-family: 'Press Start 2P', cursive;
+  color: #ffc107;
+  font-size: 40px !important;
+  text-shadow:
+    0 1px 0px #6c757d,
+    1px 0 0px #6c757d,
+    1px 2px 1px #6c757d,
+    2px 1px 1px #6c757d,
+    2px 3px 1px #6c757d,
+    3px 2px 1px #6c757d,
+    3px 4px 1px #6c757d,
+    4px 3px 1px #6c757d,
+    4px 5px 1px #6c757d,
+    5px 4px 1px #6c757d,
+    5px 5px 1px #6c757d;
+}
+.main-text{
+  font-family: 'Bebas Neue';
+  font-size: 20px;
+}
+.text-bold{
+  font-weight: bold !important;
+}
+
+.btn-secondary, .btn-secondary:focus, .btn-secondary:hover{
+  background-color: transparent;
+  border-color: transparent;
+}
+
+a{
+  text-decoration: none !important;
+  text-decoration-line: none !important;
+  color: white;
+}
+
+a:hover, a:active, a:visited{
+  text-decoration: none !important;
+  color: white !important;
+}
+
+#link{
+  text-decoration: none !important;
+  text-decoration-line: none !important;
+  color: white !important;
+}
+
+.buttons{
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.inputs{
+  font-size: 13px;
+  border: none;
+  background-color: #32383e !important;
+  color: white !important;
+}
+
+.divider{
+  height: 4rem;
+}
+
+.control-label{
+  display: none;
+}
+
+.scrollToTopBtn{
+  display: inline-block;
+  /* hide with opacity */
+  opacity: 0;
+  /* also add a translate effect */
+  transform: translateY(100px);
+  /* and a transition */
+  transition: all .5s ease !important;
+}
+
+.showBtn {
+  opacity: 1;
+  transform: translateY(0)
+}
+
+/*The navigation bar / the top header bar */
+.head {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+  z-index: 2;
+}
+
+/* Main content */
+.main_content{
+  margin-top: 115px; /* Add a top margin to avoid content overlay */
+
+} 
+
+.main_content_index{
+  margin-top: 50px;
+}
+
+@media (min-width: 0px) and (max-width: 991.98px) { 
+  .main_content{
+      margin-top: 145px; /* Add a top margin to avoid content overlay */
+    
+  } 
+  .main_content_index{
+    margin-top: 150px;
+  }
+
+  #cover, #cover_btn{
+    height: 30vh !important;
+    width: 100%;
+  }
+}
+
+@media (min-height: 0px) and (max-height: 500px){
+  #cover, #cover_btn{
+    height: 35vh !important;
+    width: 100%;
+  }
+}
+
+#footer a{ 
+  color: gray !important;
+}
+
+/* 
+Modal classes for fade .fade-in-out
+*/
+
+.fade-in-out:not(.show){
+  opacity: 0;
+}
+
+.fade-in-out{
+  transition: opacity .15s linear;
+  transition-property: opacity;
+  transition-duration: 0.15s;
+  transition-timing-function: linear;
+  transition-delay: 0s;
+}
+
+/*
+Modal title-footer classes
+*/
+
+#message{
+  overflow: hidden;
+  position: fixed;
+  bottom: 20px;
+  z-index: 4;
+}

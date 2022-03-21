@@ -1,0 +1,38 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    height: 100vh;
+    
+}
+
+.control-label{
+    display: none;
+}
+
+#images .card img{
+    max-height: 60vh;
+    object-fit: cover;
+}
+
+#community-card{
+    max-width: 70%;
+    height: auto;
+}
+
+.card-title{
+    font-family: 'Bebas Neue';
+    font-size: 25px !important;
+}
+
+div .form-group{
+    margin-bottom: 0;
+    margin-right: 4px;
+}
+
+#footer{
+    padding-bottom: 10px;
+    text-decoration: none;
+    
+}

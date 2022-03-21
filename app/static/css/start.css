@@ -1,0 +1,42 @@
+body{
+    height: 100vh;
+    
+}
+
+.nav_noMargin{
+    margin-bottom: 0%;
+    margin-top: 0%;
+    border-radius:unset;
+}
+
+.noStyle_link{
+    text-decoration: none;
+    touch-action: none;
+    color: white;
+}
+
+.navbar-brand{
+    height: unset;
+    color: white;
+}
+
+/* 
+Modal classes for fade .fade-in-out
+*/
+
+.fade-in-out:not(.show){
+    opacity: 0;
+}
+
+.fade-in-out{
+    transition: opacity .15s linear;
+    transition-property: opacity;
+    transition-duration: 0.15s;
+    transition-timing-function: linear;
+    transition-delay: 0s;
+}
+
+/*
+Modal title-footer classes
+*/
+

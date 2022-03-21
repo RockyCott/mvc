@@ -1,0 +1,62 @@
+{% extends 'bootstrap/base.html' %}
+{% import 'bootstrap/wtf.html' as wtf %}
+{% import 'macros.html' as macros %}
+
+{% block styles %}
+ {{super()}}
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+ <link rel="stylesheet" href="{{url_for('static', filename='css/styles.css')}}">
+ <link rel="stylesheet" href="{{url_for('static', filename='css/suggestions.css')}}">
+{% endblock %}
+
+{% block scripts %}
+{{super()}}
+<script src="https://kit.fontawesome.com/4910d4f4c4.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+<script>
+    document.getElementById('go-back').addEventListener('click', () => {
+    history.back();
+    });
+</script>
+{% endblock %}
+
+{% block title %}
+    {{ super() }}
+    Suggest
+{% endblock %}
+
+{% block content %}
+    {{ macros.header(current_user) }}
+
+
+    <div class="container h-90 main_content">
+        <div class="row align-items-center h-90">
+            <div class="col-lg-5 col-md-6 m-auto form-box rounded">
+                <form class="w-75 mx-auto mt-2 text-center" method="POST" enctype="multipart/form-data">
+                    <h2 class="text-center fw-bold py-4 main_title">Have a suggestion? Let us know!</h2>
+                    {{ form.hidden_tag() }}
+                    {{ wtf.form_field(form.subject, placeholder='Subject', class='form-control inputs') }}
+                    {{ wtf.form_field(form.suggestion, placeholder='Description', class='form-control inputs') }}
+
+                    {{ wtf.form_field(form.send, class="btn btn-primary btn-block buttons")}}
+                    <br><br>
+                    <div class="mt-0">
+                        <div>
+                            {% with messages = get_flashed_messages() %}
+                                {% if messages %}
+                                    {% for msg in messages %}
+                                        <div class="alert alert-warning" role="alert">
+                                            {{ msg }}
+                                        </div>
+                                    {% endfor %}
+                                {% endif %}
+                            {% endwith %}
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    {{ macros.bottom() }}
+{% endblock%}
